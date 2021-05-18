@@ -5,3 +5,5 @@ bool
 string
 int
 float64
+
+go run main.go
