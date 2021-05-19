@@ -29,3 +29,17 @@ func newDeck() deck {
 	}
 	return cards
 }
+
+// Slices are zero indexed.
+// Slices can be index fruits[2]
+// Go has subset functionality built into slices
+// fruits[0:2] is fruits[startIndexIncluding : upToNotIncluding]
+// fruits[0:2] and fruits[:2] are equivalent
+// fruits[2:] means index at 2 to end of slice
+
+// Go has support for returning multiple values from one function
+// This function returns to values, both of type deck
+// Return the dealt hand and the remaining deck
+func deal(d deck, handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
+}

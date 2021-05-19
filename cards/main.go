@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 	// var card string = "Ace of Spades" // declared type
 	// card := "Ace of Spades" // inferred type, but := is only used for declaration + initialization
@@ -13,7 +15,13 @@ func main() {
 	// 	cards.print()
 
 	cards := newDeck()
-	cards.print()
+	// cards.print()
+	hand, remainingDeck := deal(cards, 5) // handSize = 5
+
+	fmt.Println("Your Hand")
+	hand.print()
+	fmt.Println("\n\nRemaining Deck")
+	remainingDeck.print()
 }
 
 // func newCard() string {
